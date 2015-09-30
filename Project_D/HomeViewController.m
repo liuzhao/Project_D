@@ -95,8 +95,7 @@
         [_listTableView.header endRefreshing];
         [_listTableView.footer endRefreshing];
         [_listTableView reloadData];
-        
-    }failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"发生错误！%@，错误的URL：%@",error, operation.response.URL);
         [_listTableView.header endRefreshing];
         [_listTableView.footer endRefreshing];
